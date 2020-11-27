@@ -1,63 +1,55 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { EMPTY, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { MatSnackBar } from '@angular/material/snack-bar'
 import { Cliente } from '../model/cliente.model';
+import { TipoVeiculo } from '../model/tipo-veiculo.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ClienteService {
+export class TipoVeiculoService {
 
-  baseUrl = "http://localhost:8080/clientes";
+  baseUrl = 'http://localhost:8080/tipo-veiculos';
 
   constructor(
     private snackBar: MatSnackBar,
     private http: HttpClient
   ) { }
 
-  create(cliente: Cliente): Observable<Cliente> {
-    return this.http.post<Cliente>(this.baseUrl, cliente).pipe(
+  create(tipoVeiculo: TipoVeiculo): Observable<TipoVeiculo> {
+    return this.http.post<TipoVeiculo>(this.baseUrl, tipoVeiculo).pipe(
       map(obj => obj),
-      catchError(e => this.errorHandler(e))
-    )
+      catchError( e => this.errorHandler(e))
+    );
   }
 
-  read(): Observable<Cliente[]> {
-    return this.http.get<Cliente[]>(this.baseUrl).pipe(
+  read(): Observable<TipoVeiculo[]> {
+    return this.http.get<TipoVeiculo[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     );
   }
 
-  readById(id: number): Observable<Cliente> {
-    const url = `${this.baseUrl}/${id}`
+  readById(id: number): Observable<TipoVeiculo> {
+    const url = `${this.baseUrl}/${id}`;
     return this.http.get<Cliente>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     );
   }
 
-  readByNome(nome: string): Observable<Cliente[]> {
-    const url = `${this.baseUrl}/nome?nome=${nome}`;
-
-    return this.http.get<Cliente[]>(url).pipe(
-      map(obj => obj),
-      catchError(e => this.errorHandler(e))
-    );
-  }
-
-  update(cliente: Cliente): Observable<Cliente> {
-    const url = `${this.baseUrl}/${cliente.id}`;
-    return this.http.put<Cliente>(url, cliente).pipe(
+  update(tipoVeiculo: TipoVeiculo): Observable<TipoVeiculo> {
+    const url = `${this.baseUrl}/${tipoVeiculo.id}`;
+    return this.http.put<Cliente>(url, tipoVeiculo).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
   delete(id: number) {
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.baseUrl}/${id}`;
     return this.http.delete<Cliente>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

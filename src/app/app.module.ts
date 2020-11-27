@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
 
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { FooterComponent } from './components/template/footer/footer.component';
@@ -28,6 +29,10 @@ import { ClienteCreateComponent } from './components/cliente/cliente-create/clie
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-read.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { TipoVeiculoCreateComponent } from './components/tipo-veiculo/tipo-veiculo-create/tipo-veiculo-create.component';
+import { TipoVeiculoReadComponent } from './components/tipo-veiculo/tipo-veiculo-read/tipo-veiculo-read.component';
+import { TipoVeiculoUpdateComponent } from './components/tipo-veiculo/tipo-veiculo-update/tipo-veiculo-update.component';
+import { TipoVeiculoDeleteComponent } from './components/tipo-veiculo/tipo-veiculo-delete/tipo-veiculo-delete.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,11 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
     ClienteCreateComponent,
     ClienteUpdateComponent,
     ClienteReadComponent,
-    ClienteDeleteComponent
+    ClienteDeleteComponent,
+    TipoVeiculoCreateComponent,
+    TipoVeiculoReadComponent,
+    TipoVeiculoUpdateComponent,
+    TipoVeiculoDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +68,8 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
     MatInputModule,
     MatSnackBarModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
