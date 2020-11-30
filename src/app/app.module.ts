@@ -15,6 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
 
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { FooterComponent } from './components/template/footer/footer.component';
@@ -33,6 +34,10 @@ import { TipoVeiculoCreateComponent } from './components/tipo-veiculo/tipo-veicu
 import { TipoVeiculoReadComponent } from './components/tipo-veiculo/tipo-veiculo-read/tipo-veiculo-read.component';
 import { TipoVeiculoUpdateComponent } from './components/tipo-veiculo/tipo-veiculo-update/tipo-veiculo-update.component';
 import { TipoVeiculoDeleteComponent } from './components/tipo-veiculo/tipo-veiculo-delete/tipo-veiculo-delete.component';
+import { VeiculoCreateComponent } from './components/veiculo/veiculo-create/veiculo-create.component';
+import { VeiculoReadComponent } from './components/veiculo/veiculo-read/veiculo-read.component';
+import { VeiculoUpdateComponent } from './components/veiculo/veiculo-update/veiculo-update.component';
+import { VeiculoDeleteComponent } from './components/veiculo/veiculo-delete/veiculo-delete.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +58,11 @@ import { TipoVeiculoDeleteComponent } from './components/tipo-veiculo/tipo-veicu
     TipoVeiculoCreateComponent,
     TipoVeiculoReadComponent,
     TipoVeiculoUpdateComponent,
-    TipoVeiculoDeleteComponent
+    TipoVeiculoDeleteComponent,
+    VeiculoCreateComponent,
+    VeiculoReadComponent,
+    VeiculoUpdateComponent,
+    VeiculoDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +78,8 @@ import { TipoVeiculoDeleteComponent } from './components/tipo-veiculo/tipo-veicu
     MatSnackBarModule,
     FormsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

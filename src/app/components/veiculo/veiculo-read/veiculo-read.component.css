@@ -1,0 +1,27 @@
+.find > button {
+    margin-left: 30px;
+}
+
+table {
+    width: 100%;
+}
+
+.edit{
+    margin-right: 20px;
+}
+
+.edit > i{
+    color: #d9cd26;
+}
+
+.delete > i {
+    color: #e35e6b
+}
+
+.add {
+    margin-right: 20px;
+}
+
+.add > i {
+    color: #5ee35e;
+}

@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-title>
+        Excluir veículo
+    </mat-card-title>
+
+    <form action="">
+        <p>Tem certeza que deseja excluir esse veículo?</p>
+        
+        <mat-form-field>
+            <input matInput placeholder="Placa" [value]="veiculo.placa" name="placa" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cor" [value]="veiculo.cor" name="cor" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Modelo" [value]="veiculo.modelo" name="modelo" disabled>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="deleteCliente()" color="warn">
+        Excluir
+    </button>
+
+    <button mat-raised-button (click)="cancel()" color="danger">
+        Cancelar
+    </button>
+</mat-card>
+<p>veiculo-delete works!</p>

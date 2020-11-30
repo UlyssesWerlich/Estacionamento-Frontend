@@ -6,6 +6,9 @@ import { ClienteUpdateComponent } from './components/cliente/cliente-update/clie
 import { TipoVeiculoCreateComponent } from './components/tipo-veiculo/tipo-veiculo-create/tipo-veiculo-create.component';
 import { TipoVeiculoDeleteComponent } from './components/tipo-veiculo/tipo-veiculo-delete/tipo-veiculo-delete.component';
 import { TipoVeiculoUpdateComponent } from './components/tipo-veiculo/tipo-veiculo-update/tipo-veiculo-update.component';
+import { VeiculoCreateComponent } from './components/veiculo/veiculo-create/veiculo-create.component';
+import { VeiculoDeleteComponent } from './components/veiculo/veiculo-delete/veiculo-delete.component';
+import { VeiculoUpdateComponent } from './components/veiculo/veiculo-update/veiculo-update.component';
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { EntradaComponent } from './views/entrada/entrada.component';
 import { HomeComponent } from './views/home/home.component';
@@ -32,6 +35,15 @@ const routes: Routes = [
   } ,{
     path: "veiculos",
     component: VeiculoComponent
+  },{
+    path: "veiculos/adicionar",
+    component: VeiculoCreateComponent
+  },{
+    path: "veiculos/atualizar/:id",
+    component: VeiculoUpdateComponent
+  },{
+    path: "veiculos/remover/:id",
+    component: VeiculoDeleteComponent
   }, {
     path: "entradas",
     component: EntradaComponent

@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-title>Atualizar dados do veículo</mat-card-title>
+
+    <form action="">
+        <mat-form-field>
+            <input matInput placeholder="Placa"
+                [(ngModel)]="veiculo.placa" name="placa" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cor" 
+                [(ngModel)]="veiculo.cor" name="cor" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Modelo"
+                [(ngModel)]="veiculo.modelo" name="modelo" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo de veículo</mat-label>
+            <mat-select [(ngModel)]="veiculo.tipoVeiculoId" name="tipoVeiculoId">
+              <mat-option *ngFor="let tipoVeiculo of tipoVeiculos" [value]="tipoVeiculo.id">
+                {{tipoVeiculo.nome}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="updateVeiculo()" color="primary">
+        Alterar
+    </button>
+
+    <button mat-raised-button (click)="cancel()" color="danger">
+        Cancelar
+    </button>
+</mat-card>
