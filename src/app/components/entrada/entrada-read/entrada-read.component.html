@@ -1,0 +1,72 @@
+<div class="mat-elevation-z8">
+
+    <table mat-table [dataSource]="entradas">
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Id</th>
+            <td mat-cell *matCellDef="let entrada">{{entrada.id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="placa">
+            <th mat-header-cell *matHeaderCellDef>Placa</th>
+            <td mat-cell *matCellDef="let entrada">{{entrada.placa}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cor">
+            <th mat-header-cell *matHeaderCellDef>Cor</th>
+            <td mat-cell *matCellDef="let entrada">{{entrada.cor}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="modelo">
+            <th mat-header-cell *matHeaderCellDef>Modelo</th>
+            <td mat-cell *matCellDef="let entrada">{{entrada.modelo}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipoVeiculo">
+            <th mat-header-cell *matHeaderCellDef>Tipo de veículo</th>
+            <td mat-cell *matCellDef="let entrada">{{entrada.tipoVeiculo}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="precoPorTipoVeiculo">
+            <th mat-header-cell *matHeaderCellDef>Preço</th>
+            <td mat-cell *matCellDef="let entrada">{{entrada.precoPorTipoVeiculo}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef>Nome</th>
+            <td mat-cell *matCellDef="let entrada">{{entrada.nome}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="telefone">
+            <th mat-header-cell *matHeaderCellDef>Telefone</th>
+            <td mat-cell *matCellDef="let entrada">{{entrada.telefone}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="celular">
+            <th mat-header-cell *matHeaderCellDef>Celular</th>
+            <td mat-cell *matCellDef="let entrada">{{entrada.celular}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>
+                <a routerLink="/entradas/adicionar" class="add">
+                    <i class="material-icons">add</i>
+                    <i class="material-icons">emoji_transportation</i>
+                </a>
+            </th>
+            <td mat-cell *matCellDef="let entrada">
+                <a routerLink="/pagamentos/adicionar/{{ entrada.id }}" class="edit">
+                    <i class="material-icons">payments</i>
+                </a>
+
+                <a routerLink="/entradas/remover/{{ entrada.id }}" class="delete">
+                    <i class="material-icons">delete</i>
+                </a>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let entrada; columns: displayedColumns;"></tr>
+    </table>
+
+</div>

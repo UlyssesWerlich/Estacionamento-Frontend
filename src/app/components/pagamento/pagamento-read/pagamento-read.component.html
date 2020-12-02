@@ -1,0 +1,36 @@
+<div class="mat-elevation-z8">
+    <mat-card>
+        <form class="find" action="">
+
+            <mat-form-field>
+                <input matInput [(ngModel)]="idPagamento" name="idPagamento" placeholder="ID do pagamento">
+            </mat-form-field>
+
+            <button mat-raised-button (click)="findById()">
+                Buscar
+            </button>
+
+        </form>
+    </mat-card>
+
+</div>
+
+<mat-card>
+    <mat-card-title>Pagamento</mat-card-title>
+
+    <mat-card-subtitle>ID de entrada</mat-card-subtitle>
+    <mat-card-content>{{ pagamento.entradaId }}</mat-card-content>
+
+    <mat-card-subtitle>Valor do pagamento feito</mat-card-subtitle>
+    <mat-card-content>{{ pagamento.valorPagamento | currency: 'BRL' }}</mat-card-content>
+
+    <mat-card-subtitle>Valor a ser cobrado pela entrada</mat-card-subtitle>
+    <mat-card-content>{{ pagamento.valorTotalEntrada | currency: 'BRL' }}</mat-card-content>
+
+    <mat-card-subtitle>Unidades de tempo a ser cobrado</mat-card-subtitle>
+    <mat-card-content>{{ pagamento.quantidadeIntervaloDeTempo }}</mat-card-content>
+
+    <mat-card-subtitle>Tempo de estacionamento</mat-card-subtitle>
+    <mat-card-content>{{ pagamento.tempoEstacionamento }}</mat-card-content>
+
+</mat-card>

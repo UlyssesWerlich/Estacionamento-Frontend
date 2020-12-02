@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { EntradaCreateComponent } from './components/entrada/entrada-create/entrada-create.component';
+import { EntradaDeleteComponent } from './components/entrada/entrada-delete/entrada-delete.component';
+import { PagamentoCreateComponent } from './components/pagamento/pagamento-create/pagamento-create.component';
+import { PagamentoReadComponent } from './components/pagamento/pagamento-read/pagamento-read.component';
 import { TipoVeiculoCreateComponent } from './components/tipo-veiculo/tipo-veiculo-create/tipo-veiculo-create.component';
 import { TipoVeiculoDeleteComponent } from './components/tipo-veiculo/tipo-veiculo-delete/tipo-veiculo-delete.component';
 import { TipoVeiculoUpdateComponent } from './components/tipo-veiculo/tipo-veiculo-update/tipo-veiculo-update.component';
@@ -48,8 +52,17 @@ const routes: Routes = [
     path: "entradas",
     component: EntradaComponent
   }, {
+    path: "entradas/adicionar",
+    component: EntradaCreateComponent
+  }, {  
+    path: "entradas/remover/:id",
+    component: EntradaDeleteComponent
+  }, {
     path: "pagamentos",
     component: PagamentoComponent
+  },{
+    path: "pagamentos/adicionar/:idEntrada",
+    component: PagamentoCreateComponent
   }, {
     path: "tipo-veiculos",
     component: TipoVeiculoComponent

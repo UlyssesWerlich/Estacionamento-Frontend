@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title>
+        Excluir Entrada
+    </mat-card-title>
+
+    <form action="">
+        <p>Tem certeza que deseja excluir essa entrada?</p>
+        
+        <mat-form-field>
+            <input matInput placeholder="Placa do veículo" [value]="entrada.placa" name="placa" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome do cliente" [value]="entrada.nome" name="nome" disabled>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="deleteEntrada()" color="warn">
+        Excluir
+    </button>
+
+    <button mat-raised-button (click)="cancel()" color="danger">
+        Cancelar
+    </button>
+</mat-card>

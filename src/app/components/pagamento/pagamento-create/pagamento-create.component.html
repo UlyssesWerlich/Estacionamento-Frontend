@@ -1,0 +1,45 @@
+<mat-card>
+    <mat-card-title>Fazer Pagamento</mat-card-title>
+
+    <mat-card-subtitle>ID de entrada</mat-card-subtitle>
+    <mat-card-content>{{ pagamento.entradaId }}</mat-card-content>
+
+    <mat-card-subtitle>Valor a ser cobrado pela entrada</mat-card-subtitle>
+    <mat-card-content>{{ pagamento.valorTotalEntrada | currency: 'BRL' }}</mat-card-content>
+
+    <mat-card-subtitle>Unidades de tempo a ser cobrado</mat-card-subtitle>
+    <mat-card-content>{{ pagamento.quantidadeIntervaloDeTempo }}</mat-card-content>
+
+    <mat-card-subtitle>Tempo de estacionamento</mat-card-subtitle>
+    <mat-card-content>{{ pagamento.tempoEstacionamento }}</mat-card-content>
+
+</mat-card>
+
+<mat-card>
+    <form action="">
+        <mat-form-field>
+            <input matInput placeholder="Valor a ser pago" 
+                [(ngModel)]="pagamentoRequest.valorPagamento" name="valorPagamento"/>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="createPagamento()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()" color="danger">
+        Cancelar
+    </button>
+</mat-card>
+
+
+
+
+
+
+
+
+
+
+
+

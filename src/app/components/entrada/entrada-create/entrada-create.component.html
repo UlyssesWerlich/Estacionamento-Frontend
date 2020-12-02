@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Registrar entrada</mat-card-title>
+
+    <form action="">
+        <mat-form-field>
+            <input matInput placeholder="ID do cliente"
+                [(ngModel)]="entrada.clienteId" name="clienteId" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="ID do veículo" 
+                [(ngModel)]="entrada.veiculoId" name="veiculoId" />
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="createEntrada()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()" color="danger">
+        Cancelar
+    </button>
+</mat-card>

@@ -38,6 +38,11 @@ import { VeiculoCreateComponent } from './components/veiculo/veiculo-create/veic
 import { VeiculoReadComponent } from './components/veiculo/veiculo-read/veiculo-read.component';
 import { VeiculoUpdateComponent } from './components/veiculo/veiculo-update/veiculo-update.component';
 import { VeiculoDeleteComponent } from './components/veiculo/veiculo-delete/veiculo-delete.component';
+import { EntradaCreateComponent } from './components/entrada/entrada-create/entrada-create.component';
+import { EntradaReadComponent } from './components/entrada/entrada-read/entrada-read.component';
+import { EntradaDeleteComponent } from './components/entrada/entrada-delete/entrada-delete.component';
+import { PagamentoReadComponent } from './components/pagamento/pagamento-read/pagamento-read.component';
+import { PagamentoCreateComponent } from './components/pagamento/pagamento-create/pagamento-create.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +68,11 @@ import { VeiculoDeleteComponent } from './components/veiculo/veiculo-delete/veic
     VeiculoReadComponent,
     VeiculoUpdateComponent,
     VeiculoDeleteComponent,
+    EntradaCreateComponent,
+    EntradaReadComponent,
+    EntradaDeleteComponent,
+    PagamentoReadComponent,
+    PagamentoCreateComponent,
   ],
   imports: [
     BrowserModule,
